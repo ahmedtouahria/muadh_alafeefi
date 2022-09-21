@@ -73,7 +73,7 @@ instance/
 
 # Sphinx documentation
 docs/_build/
-
+portfolio/settings/production.py
 # PyBuilder
 target/
 
