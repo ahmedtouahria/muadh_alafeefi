@@ -1,5 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block SEO %}
+<title>{{config.SITE_NAME_SEO}}</title>
+<meta name="description" content="{{config.SEO_DESCRIPTION}}" />
+<meta name="title" content="{{config.SITE_NAME_SEO}}" />
+<meta name="sailthru.tags" content="{{config.SEO_TAGS}}" />
+<meta name="sailthru.author" content="{{config.SITE_NAME_SEO}}" />
+<link rel="canonical" href="{{config.SITE_URL}}" />
+<link rel="next" href="{{config.SITE_URL}}" />
+<meta property="og:locale" content="en_EN" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{config.SITE_NAME_SEO}} " />
+<meta property="og:description" content="{{config.SEO_DESCRIPTION}}" />
+<meta property="og:url" content="{{config.SITE_URL}}" />
+<meta property="og:site_name" content="{{config.SITE_NAME_SEO}}" />
+<meta property="og:image" content="/media/{{config.LOGO}}" />
+<meta property="og:image:width" content="813" />
+<meta property="og:image:height" content="360" />
+<meta property="og:image:type" content="image/png" />
+{% endblock SEO %}
 {% block content %}
 
     <!-- Header Start -->
@@ -8,7 +27,7 @@
             <div class="row g-5 align-items-center" >
                 <div class="col-lg-6 py-6 pb-0 pt-lg-0" >
                     <h3 class="text-primary mb-3 bg-white" style="width: fit-content;">I'm</h3>
-                    <h1 class="display-3 mb-3 bg-white" style="width: fit-content;">{{config.SITE_NAME}}</h1>
+                    <h1 class="display-3 mb-3 bg-white" style="width: fit-content;">{{config.SITE_NAME_SEO}}</h1>
                     <h2 class="typed-text-output d-inline text-primary fw-bold bg-white px-2"></h2>
                     <div class="typed-text d-none ">{{config.Skills}}</div>
                     <div class="d-flex align-items-center pt-5">
@@ -21,7 +40,7 @@
                 </div>
                 <div class="col-lg-6">
                     {% get_media_prefix as MEDIA_URL %}
-                    <img class="img-fluid" src=" {{MEDIA_URL}}{{config.PRIMARY_IMAGE}}" alt="{{config.SITE_NAME}}">
+                    <img class="img-fluid" src=" {{MEDIA_URL}}{{config.PRIMARY_IMAGE}}" alt="{{config.SITE_NAME_SEO}}">
                 </div>
             </div>
         </div>
@@ -145,7 +164,7 @@
                 {% for item  in section.items  %}
                 <div class="col-lg-4 col-md-6 portfolio-item first">
                     <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="{{item.image.url}}" alt="{{section.name}} - {{config.SITE_NAME}}">
+                        <img class="img-fluid" src="{{item.image.url}}" alt="{{section.name}} - {{config.SITE_NAME_SEO}}">
                         <div class="portfolio-btn">
                             <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{{item.image.url}}" data-lightbox="portfolio"><i class="bi bi-eye"></i></a>
                             <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{{item.site_url}}"><i class="bi bi-link"></i></a>
@@ -177,7 +196,7 @@
                 {% for person in teammembers  %}
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" id="person-{{person.id}}">
                     <div class="team-item position-relative">
-                        <img class="img-fluid rounded" src="{{person.image.url}}" alt="{{person.name}} - {{config.SITE_NAME}}">
+                        <img class="img-fluid rounded" src="{{person.image.url}}" alt="{{person.name}} - {{config.SITE_NAME_SEO}}">
                         <div class="team-text bg-white rounded-end p-4">
                             <div>
                                 <h5>{{person.name}}</h5>
@@ -206,9 +225,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-3 d-none d-lg-block">
                     <div class="testimonial-left h-100">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="{% static 'img/test1.jpg' %}" alt="{{config.SITE_NAME}}">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="{% static 'img/test2.jpg' %}" alt="{{config.SITE_NAME}}">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="{% static 'img/test3.jpg' %}" alt="{{config.SITE_NAME}}">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="{% static 'img/test1.jpg' %}" alt="{{config.SITE_NAME_SEO}}">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="{% static 'img/test2.jpg' %}" alt="{{config.SITE_NAME_SEO}}">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="{% static 'img/test3.jpg' %}" alt="{{config.SITE_NAME_SEO}}">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -216,7 +235,7 @@
                         {% for testimonial in testimonials  %}
                         <div class="testimonial-item text-center">
                             <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="{{testimonial.image.url}}" alt=" {{config.SITE_NAME}}">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="{{testimonial.image.url}}" alt=" {{config.SITE_NAME_SEO}}">
                                 <div class="testimonial-icon">
                                     <i class="bi bi-chat-square-quote-fill text-primary"></i>
                                 </div>
@@ -232,9 +251,9 @@
                 </div>
                 <div class="col-lg-3 d-none d-lg-block">
                     <div class="testimonial-right h-100">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="{% static 'img/test1.jpg' %}" alt="{{config.SITE_NAME}}">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="{% static 'img/test2.jpg' %}" alt="{{config.SITE_NAME}}">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="{% static 'img/test3.jpg' %}" alt="{{config.SITE_NAME}}">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="{% static 'img/test1.jpg' %}" alt="{{config.SITE_NAME_SEO}}">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="{% static 'img/test2.jpg' %}" alt="{{config.SITE_NAME_SEO}}">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="{% static 'img/test3.jpg' %}" alt="{{config.SITE_NAME_SEO}}">
                     </div>
                 </div>
             </div>

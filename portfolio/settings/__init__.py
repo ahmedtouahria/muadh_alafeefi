@@ -45,7 +45,7 @@ CONSTANCE_ADDITIONAL_FIELDS = {
     }],
 }
 CONSTANCE_CONFIG = {
-    'SITE_NAME': ("Muaadh alafifee", 'le nom de site Web'),
+    'SITE_NAME': ("Muaadh alafifee", 'website name'),
     'SITE_URL': ("http://localhost:8000", 'site url'),
     'PRIMARY_COLOR': ("#1967ee", 'primary color',),
     'PRIMARY_VIDEO': ("", 'primary video','file_field'),
@@ -53,7 +53,7 @@ CONSTANCE_CONFIG = {
     'LOGO': ("static/img/myphoto.png", 'Logo du site Web',"image_field"),
     'PRIMARY_IMAGE': ("static/img/myphoto.png", 'Logo du site Web',"image_field"),
     'Google_analytics_id': ('12345678', "l'identifiant de la vue analytics"),
-    'Google_analytics_tag': ('UA-xxxxxxxx-1', "Tag de la balise"),
+    'Google_analytics_tag': ('UA-xxxxxxxx-1', "Tag  balise"),
     'Google_analytics_credentials': ('{json}', "Votre clés d'API", 'api_field'),
     'ABOUT_YOUR_SELF':('about','about your self'),
     'INSTAGRAM_URL':('','URL de votre page Instagram'),
@@ -62,13 +62,17 @@ CONSTANCE_CONFIG = {
     'WHATSAPP_NUMBER':('',' whatsapp number'),
     'CONTACT_NUMBER':('',' contact number'),
     'EMAIL':('',' your mail','email_field'),
+    'SEO_DESCRIPTION':('',' seo description'),
+    'SEO_TAGS':('',' seo tags'),
+    'SITE_NAME_SEO': ("Muaadh alafifee", 'site name in seo'),
+
 
 
 }
 CONSTANCE_CONFIG_FIELDSETS = {
     'GLOBAL': ('SITE_NAME', 'SITE_URL','PRIMARY_COLOR',),
     'About': ('PRIMARY_VIDEO', 'Skills','LOGO','PRIMARY_IMAGE',"ABOUT_YOUR_SELF"),
-    'SOCIAL MEDIA': ('INSTAGRAM_URL','LINKED_URL','TWITTER_URL'),
+    'SOCIAL MEDIA & seo': ('INSTAGRAM_URL','LINKED_URL','TWITTER_URL',"SEO_DESCRIPTION",'SEO_TAGS','SITE_NAME_SEO'),
     'google':('Google_analytics_id','Google_analytics_tag','Google_analytics_credentials'),
     'contact':('CONTACT_NUMBER','WHATSAPP_NUMBER','EMAIL'),
 
