@@ -30,9 +30,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'colorfield',
     'django.contrib.admin',
-'taggit',
-'rest_framework',
+    'taggit',
+    'rest_framework',
     'constance',
+    'ckeditor',
     'constance.backends.database',
     'muadh'
 ]
@@ -65,9 +66,6 @@ CONSTANCE_CONFIG = {
     'SEO_DESCRIPTION':('',' seo description'),
     'SEO_TAGS':('',' seo tags'),
     'SITE_NAME_SEO': ("Muaadh alafifee", 'site name in seo'),
-
-
-
 }
 CONSTANCE_CONFIG_FIELDSETS = {
     'GLOBAL': ('SITE_NAME', 'SITE_URL','PRIMARY_COLOR',),
@@ -83,7 +81,6 @@ CONSTANCE_CONFIG_FIELDSETS = {
 SIMPLEUI_CONFIG = {
     'system_keep':False,
     'menus': [
-
     {
         'app': 'muadh',
         'name': 'My website',
@@ -155,7 +152,7 @@ SIMPLEUI_HOME_TITLE = 'Mouadh alafifee'
 # SIMPLEUI_LOGO = '/media/img/logo.png'
 SIMPLEUI_DEFAULT_ICON = True
 SIMPLEUI_DEFAULT_ICON = True
-SIMPLEUI_DEFAULT_THEME = "blue.css"
+SIMPLEUI_DEFAULT_THEME = "black.css"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

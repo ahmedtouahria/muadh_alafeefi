@@ -1,6 +1,7 @@
 from django.db import models
 from colorfield.fields import ColorField
 # Create your models here.
+from ckeditor.fields import RichTextField
 
 class Skill(models.Model):
     skill = models.CharField('Skill name', max_length=200)
@@ -36,7 +37,7 @@ class TeamMember(models.Model):
     name = models.CharField(max_length=200)
     image= models.ImageField("Image", upload_to="persons")
     job_title = models.CharField("Job title", max_length=50)
-    abstract = models.TextField()
+    abstract =  RichTextField()
     def __str__(self):
         return self.name
     

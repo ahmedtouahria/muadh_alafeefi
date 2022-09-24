@@ -125,7 +125,7 @@
               },
               success: function (res) {
                 Swal.fire({
-                        html:`<h5>${res.name}</h5> <br> <p>${res.abstract}</p> ` ,
+                        html:`${res.abstract} ` ,
                         confirmButtonColor:"{{config.PRIMARY_COLOR }}" 
                     })},
               error: function(res){
