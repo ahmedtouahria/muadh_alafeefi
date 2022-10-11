@@ -14,9 +14,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__ + "/../")))
 SECRET_KEY = 'django-insecure-18+^q1qs43x*a#@_^%3zec2)qtu1%#78bo3(@!%fe2d=&7w8pu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -197,12 +197,12 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
           'NAME': BASE_DIR + '/db.sqlite3',
     }
-}
+}"""
 
 
 # Password validation
@@ -249,8 +249,6 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-SECRET_KEY = '-~aO;|9fJok;fopzF;rE[??/w^zcumh(9'
 DEBUG = False
 ALLOWED_HOSTS = ['muadhalafeefi.com','www.muadhalafeefi.com']
 
