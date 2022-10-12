@@ -150,37 +150,6 @@
     </div>
     <!-- Expertise End -->
 
-    <!-- Projects Start -->
-    {% if sections %}
-    {% for section in sections %}
-<div class="container-xxl py-5 pt-5">
-        <div class="container">
-            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">{{section.name}}</h1>
-                </div>
-            </div>
-            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
-                {% for item  in section.items  %}
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="{{item.image.url}}" alt="{{section.name}} - {{config.SITE_NAME}}">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{{item.image.url}}" data-lightbox="portfolio"><i class="bi bi-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{{item.site_url}}"><i class="bi bi-link"></i></a>
-                        </div>
-                    </div>
-                    <p class="my-2 fw-bold px-2">{{item.title}}</p>
-
-                </div>
-                {% endfor %}
-
-            </div>
-        </div>
-</div>
-    {% endfor %}
-    <!-- Projects End -->
-    {% endif %}
 
 
     <!-- Team Start -->
@@ -247,6 +216,38 @@
         </div>
     </div>
     <!-- Testimonial End -->
+    <!-- Projects Start -->
+    {% if sections %}
+    {% for section in sections %}
+<div class="container-xxl py-5 pt-5 " style="background:antiquewhite;">
+        <div class="container">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">{{section.name}}</h1>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+                {% for item  in section.items  %}
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="{{item.image.url}}" alt="{{section.name}} - {{config.SITE_NAME}}">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{{item.image.url}}" data-lightbox="portfolio"><i class="bi bi-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{{item.site_url}}"><i class="bi bi-link"></i></a>
+                        </div>
+                    </div>
+                    <p class="my-2 fw-bold px-2">{{item.title}}</p>
+                    <p class="my-2 fw-bold px-2 text-secondary ">{{item.description}}</p>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+</div>
+    {% endfor %}
+    <!-- Projects End -->
+    {% endif %}
+
 
     <!-- Contact Start -->
     <div class="container-xxl pb-5" id="contact">

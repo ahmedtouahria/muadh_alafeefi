@@ -52,6 +52,7 @@ class SectionItem(models.Model):
     image = models.ImageField(upload_to="sections")
     title=models.CharField("Title", max_length=200)
     site_url=models.URLField("Site url", max_length=200,null=True,blank=True)
+    description = models.TextField("Description",null=True,blank=True)
     def __str__(self):
         return self.title
 
