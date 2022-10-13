@@ -22,9 +22,6 @@
 <meta property="og:image:type" content="image/png" />
 {% endblock SEO %}
 {% block content %}
-
-
-
     <!-- Header Start -->
     <div class="container-fluid bg-light my-3 mt-0" id="home">
         <div class="container">
@@ -223,12 +220,12 @@
     {% for section in sections %}
 <div class=" container-xxl py-4 pt-5 " style="background:#2778c44f;">
         <div class="container">
-            <div class="row g-5 mb-5 align-items-center  " data-wow-delay="0.05s">
+            <div class="row g-5 mb-5 align-items-center">
                 <div class="col-lg-6">
                     <h1 class="display-5 mb-0">{{section.name}}</h1>
                 </div>
             </div>
-            <div class="row portfolio-container  " data-wow-delay="0.05s">
+            <div class="row portfolio-container">
                 {% for item  in section.items  %}
                 <div class="col-lg-4 col-md-6 portfolio-item first">
                     <div class="portfolio-img rounded overflow-hidden">
@@ -241,6 +238,7 @@
                     <p class="my-2 fw-bold px-2" style="color: black;" >{{item.title}}</p>
                     <p class="my-2 px-2" style="color:#00000063 !important">{{item.description}}</p>
                 </div>
+                
                 {% endfor %}
 
             </div>
@@ -313,6 +311,51 @@
             </div>
         </div>
     </div>
+    <a
+    href="https://wa.me/{{config.CONTACT_NUMBER}}"
+    class="whatsapp_float"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i class="fa fa-whatsapp whatsapp-icon"></i>
+  </a>
+<style>
+    /* for desktop */
+    .whatsapp_float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 100;
+    }
+
+    .whatsapp-icon {
+        margin-top: 16px;
+    }
+
+    /* for mobile */
+    @media screen and (max-width: 767px) {
+        .whatsapp-icon {
+            margin-top: 18px;
+        }
+
+        .whatsapp_float {
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 10px;
+            font-size: 27px;
+        }
+    }
+
+</style>
     <!-- Contact End -->
 
 {% endblock content %}
