@@ -66,13 +66,17 @@ CONSTANCE_CONFIG = {
     'SEO_DESCRIPTION':('',' seo description'),
     'SEO_TAGS':('',' seo tags'),
     'SITE_NAME_SEO': ("Muaadh alafifee", 'site name in seo'),
+    'WHATSAPPLINK': ("971509119591", 'whatsapplink'),
+
+
+    
 }
 CONSTANCE_CONFIG_FIELDSETS = {
     'GLOBAL': ('SITE_NAME', 'SITE_URL','PRIMARY_COLOR',),
     'About': ('PRIMARY_VIDEO', 'Skills','LOGO','PRIMARY_IMAGE',"ABOUT_YOUR_SELF"),
     'SOCIAL MEDIA & seo': ('INSTAGRAM_URL','LINKED_URL','TWITTER_URL',"SEO_DESCRIPTION",'SEO_TAGS','SITE_NAME_SEO'),
     'google':('Google_analytics_id','Google_analytics_tag','Google_analytics_credentials'),
-    'contact':('CONTACT_NUMBER','WHATSAPP_NUMBER','EMAIL'),
+    'contact':('CONTACT_NUMBER','WHATSAPP_NUMBER','EMAIL',"WHATSAPPLINK"),
 
 
 }
